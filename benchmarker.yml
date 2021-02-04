@@ -1,0 +1,8 @@
+- hosts: benchmarker
+  become: yes
+  gather_facts: yes
+  vars:
+    golang_version: 1.13
+
+roles:
+  - user.isucon
