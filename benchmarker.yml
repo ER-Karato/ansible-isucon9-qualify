@@ -28,8 +28,4 @@
         daemon_reload: yes
         enabled: yes
       loop:
-        # - nginx.service
         - mysql.service
-        # - isucari.golang.service
-        # - shipment.service
-        # - payment.service
