@@ -6,3 +6,6 @@
 
   roles:
     - user.isucon
+    - bootstrap
+    - dev.deploy
+    - initial-data
