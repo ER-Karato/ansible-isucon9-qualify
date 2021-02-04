@@ -9,3 +9,27 @@
     - bootstrap
     - dev.deploy
     - initial-data
+
+    - nginx
+    - mysql
+    - golang
+    - perl
+
+    # for benchmarker
+    - external.benchmarker
+
+  tasks:
+    - name: Start default daemons
+      become: yes
+      become_user: root
+      systemd:
+        name: "{{ item }}"
+        state: restarted
+        daemon_reload: yes
+        enabled: yes
+      loop:
+        # - nginx.service
+        - mysql.service
+        # - isucari.golang.service
+        # - shipment.service
+        # - payment.service
