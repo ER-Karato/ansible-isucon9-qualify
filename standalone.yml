@@ -6,25 +6,25 @@
 
   roles:
     - user.isucon
-    - bootstrap
+    - bootstrap-s
     - dev.deploy
     - initial-data
 
     - nginx
-    - mysql
+    - mysql-s
     - golang
     - perl
-    - php
-    - ruby
-    - python
-    - nodejs
+    # - php
+    # - ruby
+    # - python
+    # - nodejs
     - webapp.mysql
     - webapp.golang
-    - webapp.perl
-    - webapp.php
-    - webapp.ruby
-    - webapp.python
-    - webapp.nodejs
+    # - webapp.perl
+    # - webapp.php
+    # - webapp.ruby
+    # - webapp.python
+    # - webapp.nodejs
     - webapp.nginx
 
     # for dev
