@@ -1,4 +1,4 @@
-- hosts: benchmarker
+- hosts: api
   become: yes
   gather_facts: yes
   vars:
@@ -15,6 +15,9 @@
     - golang
     - perl
 
+    - webapp.golang
+    - webapp.nginx
+
     # for benchmarker
     - external.benchmarker
 
@@ -28,4 +31,5 @@
         daemon_reload: yes
         enabled: yes
       loop:
-        - mysql.service
+        - nginx.service
+        - isucari.golang.service
