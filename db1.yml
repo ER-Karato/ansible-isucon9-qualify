@@ -1,0 +1,28 @@
+- hosts: db1
+  become: yes
+  gather_facts: yes
+  vars:
+    golang_version: 1.13
+
+  roles:
+    - user.isucon
+    - bootstrap
+    - dev.deploy
+    - initial-data
+
+    - nginx
+    - mysql
+    - golang
+    - perl
+
+  tasks:
+    - name: Start default daemons
+      become: yes
+      become_user: root
+      systemd:
+        name: "{{ item }}"
+        state: restarted
+        daemon_reload: yes
+        enabled: yes
+      loop:
+        - mysql.service
