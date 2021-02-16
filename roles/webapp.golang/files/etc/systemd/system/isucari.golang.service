@@ -5,6 +5,9 @@ Description = isucon9 qualifier main application in golang
 WorkingDirectory=/home/isucon/isucari/webapp/go/
 EnvironmentFile=/home/isucon/env.sh
 
+LimitNOFILE=65536
+LimitNPROC=65536
+
 ExecStart = /home/isucon/isucari/webapp/go/isucari
 
 Restart   = always
