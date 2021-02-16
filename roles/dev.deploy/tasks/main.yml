@@ -19,7 +19,7 @@
   git:
     repo: https://github.com/ER-Karato/isucon9-qualify.git
     dest: /tmp/isucon9-qualify
-    version: edit-go
+    version: dev
     depth: 1
 
 - name: Deploy isucari
